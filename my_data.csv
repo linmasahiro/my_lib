@@ -1,0 +1,16 @@
+1,PHP,Move file,"move file file_move copy unlink","if (! function_exists('file_move')) {
+    /**
+    * Move file
+    *
+    * @param string $file
+    * @param string $new_file
+    *
+    * @return boolean
+    */
+    function file_move($file, $new_file)
+    {
+        copy($file, $new_file);
+        unlink($file);
+        return true;
+    }
+}"
